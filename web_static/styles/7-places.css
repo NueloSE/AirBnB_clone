@@ -1,0 +1,34 @@
+.places {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	/* padding: 20px; */
+}
+
+.places h1 {
+	font-size: 30px;
+	margin-top: 10px;
+	margin-left: 5px;
+	width: 100%;
+	text-align: left; /* Center the heading */
+}
+
+.places article {
+	width: 45%; /* Adjust width to fit two articles side by side */
+	padding: 20px;
+	margin: 20px 25px; /* Vertical margins for spacing */
+	border: solid 1px #ff5a5f;
+	border-radius: 4px;
+	box-sizing: border-box; /* Include padding and border in element's total width and height */
+	text-align: center;
+}
+
+/* Last article styling */
+.places article:nth-child(4) {
+	width: 48%; /* Full width for the last article */
+	margin: 0px auto;
+}
+
+.places article h2 {
+	font-size: 30px;
+}
