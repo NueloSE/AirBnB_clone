@@ -1,0 +1,33 @@
+*{
+	margin: 0px;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.container {
+	max-width: 1000px;
+	margin: 30px auto;
+}
+
+@media screen and (max-width: 400px) {
+	.container {
+		width: 350px;
+	}
+}
+
+@media screen and (min-width: 401px) and (max-width: 960px) {
+	.container {
+		width: 400px;
+	}
+}
+
+@media screen and (min-width: 961) {
+	.container {
+		width: 961px;
+	}
+}
+@media all and (orientation: landscape) {
+	.container {
+		width: 100%;
+	}
+}

@@ -1,0 +1,124 @@
+.places {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.places h1 {
+	font-size: 30px;
+	margin-top: 10px;
+	margin-left: 5px;
+	width: 100%;
+	text-align: left;
+}
+
+.places article {
+	width: 45%;
+	padding: 20px;
+	margin: 20px 25px;
+	border: solid 1px #ff5a5f;
+	border-radius: 4px;
+	box-sizing: border-box;
+	text-align: center;
+	position: relative;
+}
+
+
+.places article:nth-child(4) {
+	width: 48%;
+	margin: 0px auto;
+}
+
+.places article h2 {
+	font-size: 30px;
+}
+
+.price_by_night {
+	color: #FF5A5F;
+	border: 4px #FF5A5F solid;
+	border-radius: 100%;
+	height: 60px;
+	min-width: 60px;
+	font-size: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: 10px;
+	right: 50px;
+}
+
+.information {
+	margin-top: 25px;
+	height: 80px;
+	border-top: 1px solid #DDDDDD;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.max_guest {
+	background: url("../images/icon_group.png");
+}
+
+.number_bathroom{
+	background: url("../images/icon_bath.png");
+}
+
+.number_rooms{
+	background: url("../images/icon_bed.png");
+}
+.max_guest, .number_rooms, .number_bathroom {
+	width: 100px;
+	display: flex;
+	align-items: last baseline;
+	margin-top: 10px;
+	background-repeat: no-repeat;
+}
+
+.user {
+	margin: 20px 0px 10px 0px;
+	text-align: left;
+}
+
+.description {
+	text-align: justify;
+}
+
+article .amenities h2, article .reviews h2{
+	margin-top: 40px;
+	font-size: 16px;
+	border-bottom: solid 1px #DDDDDD;
+	text-align: left;
+}
+
+.reviews ul li{
+	list-style: none;
+	text-align: left;
+	margin: 15px 0px;
+}
+
+.amenities ul li{
+	list-style: none;
+	text-align: left;
+	padding: 10px 40px;
+	height: 30px;
+	
+}
+
+#tv {
+	background: url("../images/icon_tv.png");
+}
+#wifi {
+	background: url("../images/icon_wifi.png");
+}
+
+#pet {
+	background: url("../images/icon_pets.png");
+}
+
+#tv, #wifi, #pet{
+	background-size: 30px;
+	background-repeat: no-repeat;
+	background-position-y: 5px;
+	background-position-x: 0px;
+}

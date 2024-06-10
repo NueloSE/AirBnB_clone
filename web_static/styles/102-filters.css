@@ -11,6 +11,7 @@
 	position: relative;
 }
 
+
 .filters button{
 	font-size: 18px;
 	background-color: #ff5a5f;
@@ -26,7 +27,7 @@
 }
 
 button:hover{
-	opacity: 90%;
+	opacity: 80%;
 }
 
 .filters .locations, .filters .amenities{
@@ -87,4 +88,46 @@ button:hover{
 
 .popover li {
 	padding-left: 35px;
+}
+
+@media screen and (max-width: 400px) {
+	.filters{
+		height: 60px;
+	}
+	.filters .amenities{
+		left: 70px;
+		height: 30%;
+	}
+	.filters .locations {
+		padding-left: 25px;
+		height: 50%;
+	}
+	.filters button{
+		height: 30px;
+		font-size: 14px;
+	}
+	.locations h4, .amenities h4 {
+		font-size: 12px;
+	}
+}
+
+@media screen and (min-width: 401px) and (max-width: 960px) {
+	.filters{
+		height: 60px;
+	}
+	.filters .amenities{
+		left: 70px;
+		height: 30%;
+	}
+	.filters .locations {
+		padding-left: 25px;
+		height: 50%;
+	}
+	.filters button{
+		height: 30px;
+		font-size: 14px;
+	}
+	.locations h4, .amenities h4 {
+		font-size: 12px;
+	}
 }
