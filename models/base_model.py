@@ -6,7 +6,7 @@ which defines common attributes and methods for other classes.
 """
 import uuid
 import datetime as dt
-
+import models
 
 class BaseModel:
     """
@@ -29,6 +29,8 @@ class BaseModel:
             self.created_at = dt.datetime.now()
             self.updated_at = dt.datetime.now()
 
+            models.storage.new(self)
+        
     def __str__(self):
         """
         Returns a string representation of the object.
@@ -43,6 +45,7 @@ class BaseModel:
         Updates the updated_at attribute with the current datetime.
         """
         self.updated_at = dt.datetime.now()
+        models.storage.save()
 
     def to_dict(self):
         """
@@ -50,7 +53,7 @@ class BaseModel:
         Includes all instance attributes,
         with created_at and updated_at converted to ISO format strings.
         """
-        ser_dict = self.__dict__
+        ser_dict = self.__dict__.copy()
         ser_dict["__class__"] = self.__class__.__name__
         ser_dict['created_at'] = self.created_at.isoformat()
         ser_dict['updated_at'] = self.updated_at.isoformat()
