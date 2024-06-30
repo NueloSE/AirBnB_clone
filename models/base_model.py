@@ -8,6 +8,7 @@ import uuid
 import datetime as dt
 import models
 
+
 class BaseModel:
     """
     BaseModel class
@@ -21,8 +22,10 @@ class BaseModel:
         if kwargs:
             for key, value in kwargs.items():
                 if key != '__class__':
-                    if key  in ['created_at', 'updated_at']:
-                        value = dt.datetime.strptime(value, "%Y-%m-%dT%H:%M:%S.%f")
+                    if key in ['created_at', 'updated_at']:
+                        value = dt.datetime.strptime(
+                            value, "%Y-%m-%dT%H:%M:%S.%f"
+                        )
                     setattr(self, key, value)
         else:
             self.id = str(uuid.uuid4())
@@ -30,7 +33,7 @@ class BaseModel:
             self.updated_at = dt.datetime.now()
 
             models.storage.new(self)
-        
+
     def __str__(self):
         """
         Returns a string representation of the object.
