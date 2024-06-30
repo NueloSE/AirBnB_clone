@@ -6,6 +6,8 @@ A module that creates a City class
 
 from models.base_model import BaseModel
 
+
 class City(BaseModel):
-	state_id = ""
-	name = ""
+    """Create a class for city"""
+    state_id = ""
+    name = ""
