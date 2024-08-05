@@ -10,3 +10,6 @@ from models.base_model import BaseModel
 class Amenity(BaseModel):
     """Create a Amentity class"""
     name = ""
+    def __init__(self, *args, **kwargs):
+        """initializes user"""
+        super().__init__(*args, **kwargs)

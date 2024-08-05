@@ -11,3 +11,7 @@ class City(BaseModel):
     """Create a class for city"""
     state_id = ""
     name = ""
+    
+    def __init__(self, *args, **kwargs):
+        """initializes user"""
+        super().__init__(*args, **kwargs)
